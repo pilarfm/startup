@@ -34,3 +34,12 @@ html {
   transition:5s;  
   }
 
+  #container-boton{
+    text-align: center;
+    padding:50px;
+  }
+
+
+  button{
+    font-size:50px;
+  }
