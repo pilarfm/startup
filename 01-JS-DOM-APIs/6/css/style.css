@@ -1,0 +1,30 @@
+html {
+    box-sizing: border-box
+  }
+  *, *::before, *::after {
+    box-sizing: inherit
+  }
+
+body{
+  width:80%;
+  margin:0 auto;
+}
+
+table{
+  text-align:center;
+  font-size: 14px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width:100%;
+  border: 1px solid;
+}
+
+td{
+  border: 1px solid;
+}
+th{
+  border: 1px solid;
+}
+h1{
+  text-align:center;
+  padding:20px;
+}
