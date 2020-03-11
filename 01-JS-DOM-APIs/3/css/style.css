@@ -1,0 +1,44 @@
+html {
+    box-sizing: border-box
+  }
+  *, *::before, *::after {
+    box-sizing: inherit
+  }
+  
+
+  .header-principal{
+    font-size: 30px;
+    text-align: center;
+    font-weight:bold;
+    padding:20px;
+  }
+
+  section{
+    text-align: center;
+  }
+  
+  section header{
+    font-size: 20px;
+    font-weight:bold;
+    margin-top:30px;
+  }
+
+  .container{
+    margin: 0 auto;
+    width:80%;
+  }
+  
+  #container-boton{
+    text-align: center;
+    padding:50px;
+  }
+
+
+  button{
+    font-size:50px;
+  }
+
+  #joke-section{
+    font-size:20px;
+    margin-top:30px;
+  }
