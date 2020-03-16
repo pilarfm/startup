@@ -1,0 +1,26 @@
+html {
+    box-sizing: border-box
+  }
+  *, *::before, *::after {
+    box-sizing: inherit
+  }
+
+section{
+  width: 95%;
+}
+
+aside{
+  float: right;
+}
+
+h1{
+  text-align: center;
+}
+
+#first-li{
+  font-size: 18px;
+  color: magenta;
+  margin:10px;
+}
+
+
