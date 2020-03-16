@@ -80,6 +80,21 @@ class Movie extends EventEmitter{
         
 }
 
+class Logger{
+
+    constructor(){}
+
+    log(info){
+        console.log(info +' event has been emitted');
+    }
+
+}
+
+
+
+
+// Creating instances and Console Testing
+
 const terminator = new Movie('Terminator I', 1985, 60);
 const arnold = new Actor('Arnold Schwarzenegger', 50);
 const actors = [
@@ -91,3 +106,8 @@ const actors = [
 terminator.addCast(arnold);
 terminator.addCast(actors);
 console.log(terminator.getCast());
+
+const logger = new Logger();
+
+terminator.on('play', logger.log);
+terminator.play();

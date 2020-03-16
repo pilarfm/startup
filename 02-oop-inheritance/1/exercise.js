@@ -71,10 +71,10 @@ class EventEmitter{
 
 // Creating instances and Console Testing
 
-let movieA= new Movie('Pirates of the Caribean','2005','2hs 10min');
-let movieB= new Movie('Harry Potter 1','2004','3hs 18min');
-let movieC= new Movie('Rocky Balboa','2006','2hs 35min');
-let movieD= new Movie('The Godfather','1972','2hs 58min');
+const movieA= new Movie('Pirates of the Caribean','2005','2hs 10min');
+const movieB= new Movie('Harry Potter 1','2004','3hs 18min');
+const movieC= new Movie('Rocky Balboa','2006','2hs 35min');
+const movieD= new Movie('The Godfather','1972','2hs 58min');
 
 movieA.play();
 movieA.pause();
@@ -82,17 +82,17 @@ movieA.resume();
 movieB.play();
 movieD.play();
 
-let actorA= new Actor('Leonardo Di Caprio', 43);
-let actorB= new Actor('Brad Pitt', 50);
-let actorC= new Actor('Robert De Niro', 75);
+const actorA= new Actor('Leonardo Di Caprio', 43);
+const actorB= new Actor('Brad Pitt', 50);
+const actorC= new Actor('Robert De Niro', 75);
 
-let ee = new EventEmitter();
-let callbackA = () => {
+const ee = new EventEmitter();
+const callbackA = () => {
     console.log("Callback A");
   };
 ee.on("EventA", callbackA);
 
-let callbackB = () => {
+const callbackB = () => {
     console.log("Callback B");
   };
 ee.on("EventA", callbackB);

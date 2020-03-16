@@ -66,8 +66,8 @@ class Movie extends EventEmitter{
 
 // Creating instances and Console Testing
 
-let movieA= new Movie('Pirates of the Caribean','2005','2hs 10min');
-let movieB= new Movie('Harry Potter 1','2004','3hs 18min');
+const movieA= new Movie('Pirates of the Caribean','2005','2hs 10min');
+const movieB= new Movie('Harry Potter 1','2004','3hs 18min');
 
 movieA.on('play', function(){
     console.log("playing "+ movieA.title);
