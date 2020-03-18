@@ -1,10 +1,10 @@
 function dropEv(ev) {
-    let data= document.getElementById("data");
+    const data= document.getElementById("data");
     data.textContent='';
     ev.preventDefault();
-    let files = ev.dataTransfer.files;
-    for (var i = 0; i < files.length ; i++) {
-        let content = files[i].text()
+    const files = ev.dataTransfer.files;
+    for (let i = 0; i < files.length ; i++) {
+        const content = files[i].text()
         .then( function(content){
            data.textContent += '{'+content+'}';
         });

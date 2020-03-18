@@ -1,12 +1,12 @@
 
 
-let saveBtn = document.getElementById('save');
+const saveBtn = document.getElementById('save');
 saveBtn.onclick = saveData;
-let clearBtn=  document.getElementById('clear');
+const clearBtn=  document.getElementById('clear');
 clearBtn.onclick= clearData;
 
 function saveData(){
-    let data = document.getElementById('text-area').value;
+    const data = document.getElementById('text-area').value;
     localStorage.setItem('data',data);
     document.getElementById('saved-data').innerHTML =  localStorage.data;
 }
