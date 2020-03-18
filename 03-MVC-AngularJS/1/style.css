@@ -1,0 +1,18 @@
+
+.container header{
+    text-align:center;
+    font-size:32px;
+    padding: 30px 0;
+
+}
+
+.container{
+    text-align: center;
+    margin: 0  auto;
+    padding:30px;
+} 
+
+.save{
+    margin-bottom:20px;
+
+}
