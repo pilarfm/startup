@@ -2,33 +2,28 @@ const DB_NAME = 'DB-texts';
 const DB_VERSION = 1; 
 const DB_STORE_NAME = 'texts';
 let db;
-let saveBtn = document.getElementById('save');
+const saveBtn = document.getElementById('save');
 saveBtn.onclick = saveData;
-let clearBtn=  document.getElementById('clear');  
+const clearBtn=  document.getElementById('clear');  
 clearBtn.onclick= clearData;
 
 
 function saveData(){
-    let data = document.getElementById('text-area').value;
-    let trans = db.transaction([DB_STORE_NAME], "readwrite");
-    let store = trans.objectStore(DB_STORE_NAME);
-    let request =store.put(data, 'text');
-    request.onsuccess = function(event) {
+    const data = document.getElementById('text-area').value;
+    const req=db.transaction([DB_STORE_NAME], "readwrite").objectStore(DB_STORE_NAME).put(data, 'text');
+    req.onsuccess = function(event) {
         document.getElementById('saved-data').innerHTML =  data;
       };
 }
 
 function clearData(){
-    let trans = db.transaction([DB_STORE_NAME], "readwrite");
-    let store = trans.objectStore(DB_STORE_NAME);
-    store.clear();
+    db.transaction([DB_STORE_NAME], "readwrite").objectStore(DB_STORE_NAME).clear();
     document.getElementById('saved-data').innerHTML =  'information deleted';
     document.getElementById('text-area').value=null;
 }
 
 function openDb() {
-  //console.log("openDb ...");
-  var req = indexedDB.open(DB_NAME, DB_VERSION);
+  const req = indexedDB.open(DB_NAME, DB_VERSION);
   req.onsuccess = function (evt) {
     db = this.result;
   };
